@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=League+Spartan:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Brand fonts */
+  --font-antonio: "Antonio", ui-sans-serif, system-ui, sans-serif;
+  --font-spartan: "League Spartan", ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand colors w/closest TW equivilants */
+
+  /* slate-950 */
+  --color-planet-black: #070724;
+  /* slate-700 */
+  --color-planet-blue-gray: #38384f;
+  /* gray-500 */
+  --color-planet-light-gray: #838391;
+  /* teal-500 */
+  --color-planet-teal: #419EBB;
+  /* orange-400 */
+  --color-planet-yellow-orange: #EDA249;
+  /* violet-700 */
+  --color-planet-purple: #6D2ED5;
+  /* red-500 */
+  --color-planet-orange-red: #D14C32;
+  /* red-600 */
+  --color-planet-red: #D83A34;
+  /* orange-700 */
+  --color-planet-orange: #CD5120;
+  /* teal-500 */
+  --color-planet-green: #1EC1A2;
+  /* blue-600 */
+  --color-planet-blue: #2D68F0;
+}
