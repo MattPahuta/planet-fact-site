@@ -4,31 +4,50 @@ import { Image } from 'astro:assets';
 import mercury from '../assets/images/planet-mercury.svg';
 ---
 
-<main class="mx-auto max-w-6xl">
+<main class="mx-auto px-6 max-w-6xl">
   <!-- top-level grid container -->
-  <div class="grid grid-cols-2">
+  <div class="grid sm:grid-cols-2">
     <!-- article content -->
-    <div>
-     <h1 class="text-[2.5rem] font-antonio font-bold uppercase">Mercury</h1> 
-     <p>Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon's.</p>
-     <p class="">Source:<a class="" href="">Wikipedia</a> </p>
+    <div class="p-5 space-y-4 text-center"> 
+      <h1 class="text-[2.5rem] font-antonio font-bold uppercase">Mercury</h1> 
+      <p class="text-sm leading-relaxed">Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon's.</p>
+      <p class="text-gray-400">Source:<a class="font-semibold underline" href="">Wikipedia</a> </p>
     </div>
+
     <!-- article image -->
-    <div>
-      <Image src={mercury} alt="The planet Mercury" />
+    <div class="min-h-[300px] row-start-2 grid place-content-center">
+      <Image class="h-[111px] w-[111px]" src={mercury} alt="The planet Mercury" />
     </div>
+    
     <!-- toggle buttons -->
-    <div class="flex sm:flex-col gap-4">
-     <button class="px-4 py-3 text-white uppercase font-bold border border-neutral-400 cursor-pointer">Overview</button>
-     <button class="px-4 py-3 text-white uppercase font-bold border border-neutral-400 cursor-pointer">Internal structure</button>
-     <button class="px-4 py-3 text-white uppercase font-bold border border-neutral-400 cursor-pointer">Surface geology</button>
-    </div> 
-    <!-- vital stats -->
-    <div class="flex gap-6">
-      <div class="flex"></div>
-      <div class="flex"></div> 
-      <div class="flex"></div>
-      <div class="flex"></div>
+    <div class="grid grid-cols-3 gap-4 justify-between row-start-1">
+      <button 
+        class="px-1 py-3 w-20 bg-slate-950 text-white uppercase text-sm font-semibold border-b-4 border-teal-500 cursor-pointer hover:bg-slate-700 hover:border-slate-700 transition">Overview</button>
+      <button 
+        class="px-1 py-3 w-20 bg-slate-950 text-white uppercase text-sm font-semibold sm:border border-neutral-400 cursor-pointer hover:bg-slate-700 hover:border-slate-700 transition"><span class="hidden">Internal</span> structure</button>
+      <button 
+        class="px-1 py-3 w-20 bg-slate-950 text-white uppercase text-sm font-semibold sm:border border-neutral-400 cursor-pointer hover:bg-slate-700 hover:border-slate-700 transition">Surface <span class="hidden">geology</span></button>
+    </div>
+
+
+    <!-- vital stats cards -->
+    <div class="flex flex-col gap-2 sm:gap-4 uppercase sm:col-span-2">
+      <div class="p-2.5 flex items-center justify-between border border-gray-600">
+        <h3 class="text-xs font-bold text-gray-400">Rotation Time</h3>
+        <p class="text-xl uppercase font-antonio font-bold">58.6 days</p>
+      </div>
+      <div class="p-2.5 flex items-center justify-between border border-gray-600">
+        <h3 class="text-xs font-bold text-gray-400">Revolution Time</h3>
+        <p class="text-xl uppercase font-antonio font-bold">87.97 days</p>  
+      </div> 
+      <div class="p-2.5 flex items-center justify-between border border-gray-600">
+        <h3 class="text-xs font-bold text-gray-400">Radius</h3>
+        <p class="text-xl uppercase font-antonio font-bold">2,439.7 km</p>
+      </div>
+      <div class="p-2.5 flex items-center justify-between border border-gray-600">
+        <h3 class="text-xs font-bold text-gray-400">Average Temp.</h3>
+        <p class="text-xl uppercase font-antonio font-bold">430 c</p>
+      </div>
     </div>
   </div>          
 </main>
