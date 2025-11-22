@@ -6,28 +6,29 @@ import mercury from '../assets/images/planet-mercury.svg';
 
 <main class="mx-auto max-w-6xl">
   <!-- top-level grid container -->
-  <div class="grid">
+  <div class="grid grid-cols-2">
     <!-- article content -->
     <div>
-     <h1 class="text-[40px] font-antonio font-bold uppercase">Mercury</h1> 
+     <h1 class="text-[2.5rem] font-antonio font-bold uppercase">Mercury</h1> 
      <p>Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon's.</p>
+     <p class="">Source:<a class="" href="">Wikipedia</a> </p>
     </div>
     <!-- article image -->
     <div>
       <Image src={mercury} alt="The planet Mercury" />
     </div>
     <!-- toggle buttons -->
-    <div>
-     <a href="" class="">Overview</a>
-     <a href="" class="">Internal structure</a>
-     <a href="" class="">Surface geology</a>
+    <div class="flex sm:flex-col gap-4">
+     <button class="px-4 py-3 text-white uppercase font-bold border border-neutral-400 cursor-pointer">Overview</button>
+     <button class="px-4 py-3 text-white uppercase font-bold border border-neutral-400 cursor-pointer">Internal structure</button>
+     <button class="px-4 py-3 text-white uppercase font-bold border border-neutral-400 cursor-pointer">Surface geology</button>
     </div> 
     <!-- vital stats -->
     <div class="flex gap-6">
       <div class="flex"></div>
-      <div class="flex"></div>
+      <div class="flex"></div> 
       <div class="flex"></div>
       <div class="flex"></div>
     </div>
-  </div>
+  </div>          
 </main>
